@@ -7,17 +7,22 @@ const domContainer = document.querySelector('.container');
 for (let i = 1; i < 100; i++) {
     const domBlocco = document.createElement('div');
     domBlocco.classList.add('blocco');
+    
     if (i % 3 == 0 && i % 5 == 0){
         domBlocco.append("FizzBuzz");
+        domBlocco.classList.add('red');
     }
     else if (i % 5 == 0) {
         domBlocco.append("Buzz");
+        domBlocco.classList.add('orange');
     }
     else if ( i % 3 == 0 ) {
         domBlocco.append("Fizz");
+        domBlocco.classList.add('teal');
     }
     else {
         domBlocco.append(i);
+        domBlocco.classList.add('blue');
     }
     domContainer.append(domBlocco);
 }
