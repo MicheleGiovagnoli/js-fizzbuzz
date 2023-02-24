@@ -7,6 +7,17 @@ const domContainer = document.querySelector('.container');
 for (let i = 1; i < 100; i++) {
     const domBlocco = document.createElement('div');
     domBlocco.classList.add('blocco');
-    domBlocco.append(i);
+    if (i % 3 == 0 && i % 5 == 0){
+        domBlocco.append("FizzBuzz");
+    }
+    else if (i % 5 == 0) {
+        domBlocco.append("Buzz");
+    }
+    else if ( i % 3 == 0 ) {
+        domBlocco.append("Fizz");
+    }
+    else {
+        domBlocco.append(i);
+    }
     domContainer.append(domBlocco);
 }
